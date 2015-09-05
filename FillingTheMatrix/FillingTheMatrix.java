@@ -6,14 +6,14 @@ class Matrix {
 
   public void fillingSnake() {
     body = new int[size][size];
-    int startLine,
+    int cycle,
         endLine = 0,
         value = 1;
 
     if (size % 2 == 0) {
-      startLine = size / 2;
+      cycle = size / 2;
     } else {
-      startLine = (int) (size / 2) + 1;
+      cycle = (int) (size / 2) + 1;
     }
 
         for (int m = endLine; m < size - endLine; m++) {           // сверху
@@ -32,7 +32,7 @@ class Matrix {
             body[endLine][m] = value;
             value++;
         }
-        startLine--;
+        cycle--;
         endLine++;
   }
 
