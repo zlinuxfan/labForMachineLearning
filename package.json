@@ -1,0 +1,19 @@
+{
+  "name": "labformachinelearning",
+  "version": "1.0.0",
+  "description": "лабы по машинному обучению",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zlinuxfan/labForMachineLearning.git"
+  },
+  "author": "ZLinuxFan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zlinuxfan/labForMachineLearning/issues"
+  },
+  "homepage": "https://github.com/zlinuxfan/labForMachineLearning#readme"
+}
