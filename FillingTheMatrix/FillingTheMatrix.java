@@ -16,24 +16,26 @@ class Matrix {
       cycle = (int) (size / 2) + 1;
     }
 
-        for (int m = endLine; m < size - endLine; m++) {           // сверху
-            body[m][endLine] = value;
-            value++;
-        }
-        for (int m = endLine + 1; m < size- endLine; m++) {         // справа
-            body[size - 1 - endLine][m] = value;
-            value++;
-        }
-        for (int m = size - 2 - endLine; m >= endLine; m--) {         // внизу
-            body[m][size - 1 - endLine] = value;
-            value++;
-        }
-        for (int m = size - 2 - endLine; m > endLine; m--) {         // слева
-            body[endLine][m] = value;
-            value++;
-        }
-        cycle--;
-        endLine++;
+    while (cycle > 0) {
+      for (int m = endLine; m < size - endLine; m++) {           // сверху
+          body[m][endLine] = value;
+          value++;
+      }
+      for (int m = endLine + 1; m < size- endLine; m++) {         // справа
+          body[size - 1 - endLine][m] = value;
+          value++;
+      }
+      for (int m = size - 2 - endLine; m >= endLine; m--) {         // внизу
+          body[m][size - 1 - endLine] = value;
+          value++;
+      }
+      for (int m = size - 2 - endLine; m > endLine; m--) {         // слева
+          body[endLine][m] = value;
+          value++;
+      }
+      cycle--;
+      endLine++;
+    }
   }
 
   public void print() {
